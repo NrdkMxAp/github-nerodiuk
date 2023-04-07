@@ -23,6 +23,22 @@ body{
     font-style: normal;
 }
    
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
 *
 ::before, 
 ::after {
@@ -43,13 +59,12 @@ body{
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin:0 auto;
 }
 
 .header {
     background-color: var(--white-bgc-color);
-    border-bottom: 1px solid #ECECEC;
+
 }
 
 .header .conteiner {
@@ -60,6 +75,7 @@ body{
 .nav-page {
     display: flex;
     flex-direction: row;
+    border-bottom: 1px solid #ECECEC;
 }
 
 .logo {
@@ -140,7 +156,6 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1600px;
     height: 600px;
     background-color: var(--primary-bgc-color);
 }
@@ -174,14 +189,11 @@ span {
     display: flex;
     align-items: center;
     text-align: center;
-    padding: 8px 30px;
+    padding: 10px 32px;
     background-color: var(--button-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    max-width: 216px;
-    max-height: 50px;
-
-    font-family: roboto, sans-serif;
+    border:none;
+    
     font-weight: 700;
     font-style: normal;
     font-size: 16px;
@@ -222,7 +234,6 @@ span {
 .adventages .name {
     margin-top: 0;
     margin-bottom: 10px;
-    height: 16px;
 
     font-weight: 700;
     line-height: 1.14;
@@ -243,24 +254,14 @@ span {
     margin-bottom: 94px;
 }
 
-.work .conteiner {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 94px;
-}
-
 .work .title {
     margin-top: 0;
     margin-bottom: 50px;
-    max-width: 366px;
-    max-height: 42px;
+    text-align: center;
 
-    font-family: roboto, sans-serif;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
-
 
     color: var(--primary-black-color);
 }
@@ -273,12 +274,6 @@ span {
     margin-bottom: 0;
 }
 
-.work .item{
-    display: inline-block;
-    max-width: 370px;
-    max-height: 294px;
-}
-
 .work .item:not(:first-child){
     margin-left: 30px;
 }
@@ -289,7 +284,6 @@ span {
     padding-top: 94px;
     padding-bottom: 94px;
     background-color: var(--secondary-bgc-color);
-    font-family: roboto, sans-serif;
 }
 
 .team .title {
@@ -305,9 +299,6 @@ span {
 
 .team .list {
     display: flex;
-    flex-direction: row;
-    padding-left: 0;
-    margin: 0;
 }
 
 .team .card {
@@ -315,16 +306,10 @@ span {
     background-color: var(--white-bgc-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    width: 270px;
-    height: 368px;
 }
 
 .team .card:not(:first-child){
     margin-left: 30px;
-}
-
-.team .item {
-    display: block;
 }
 
 .team .name {
@@ -341,7 +326,7 @@ span {
 }
 
 .team .text {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     margin-top: 0px;
 
     font-style: normal;
@@ -371,8 +356,6 @@ span {
     font-size: 26px;
     line-height: 1.19;
     color: var(--primary-white-color);
-    width: 145px;
-    height: 31px;
 }
 
 .address {
@@ -387,8 +370,6 @@ span {
 }
 
 .address .link {
-    max-height: 21px;
-    
     font-family: inherit;
     font-style: normal;
     line-height: 1.71;
@@ -496,12 +477,9 @@ span {
 
 .examples .card-img {
     display: block;
-    width: 370px;
-    height: 294px;
 }
 
 .examples .card-text {
-    width: 370px;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
