@@ -12,8 +12,7 @@
 }
 
 body{
-    width: 1600px;
-    margin: 0;
+    margin: 0 auto;
 
     color: var(--primary-text-color);
     font-family: roboto,sans-serif;
@@ -325,7 +324,7 @@ span {
 }
 
 .team .item {
-    margin-bottom: -7px;
+    display: block;
 }
 
 .team .name {
