@@ -158,16 +158,21 @@ span {
     fill: var(--primary-text-color);
 }
 
-
 .auth-nav .link:hover,
 .auth-nav .link:focus{
     color: var(--accent-color);
 }
 
-.envelope-icon,.smartphone-icon:hover,
-.envelope-icon,.smartphone-icon:focus{
+.auth-nav li:hover .envelope-icon,
+.auth-nav li:hover .smartphone-icon {
     fill: var(--accent-color);
 }
+
+.auth-nav li:focus .envelope-icon,
+.auth-nav li:focus .smartphone-icon {
+    fill: var(--accent-color);
+}
+
 
 /* HERO */
 
@@ -175,7 +180,14 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(/Images/bgc-hero.jpg);
+   
+    background-color: var(--secondary-black-color);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ), url(/Images/bgc-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
@@ -371,16 +383,12 @@ span {
     margin-bottom: 30px;
 }
 
-.social-link__list .social-link__item {
+.social-link {
     display: flex;
+    align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
-}
-
-.social-link {
-    display: flex;
-    align-self: center;
 }
 
 .social-link__list .social-link__item:hover,
@@ -398,18 +406,65 @@ span {
     fill: #AFB1B8;
 }
 
-.social-link__list .social-link__icon:hover,
-.social-link__list .social-link__icon:focus {
+.social-link__list li:hover .social-link__icon,
+.social-link__list li:focus .social-link__icon {
     fill: var(--primary-white-color);
 }
 
+/* CLIENTS */
+
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients .title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--primary-black-color);
+    margin-bottom: 50px;
+}
+
+.clients .list {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.clients-list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 172px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    fill: #AFB1B8;
+}
+
+.clients-list__item:hover,
+.clients-list__item:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.clients-list__item:not(:last-child) {
+    margin-right: 30px;
+}
 
 /* FOOTER */
 
 .footer {
+    
     background-color: var(--primary-bgc-color);
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer .conteiner {
+    display: flex;
 }
 
 .footer .adress{
@@ -430,32 +485,78 @@ span {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    margin-right: 50px;
 }
 
-.adress .map.link {
+.address .map.link {
     line-height: 1.71;
     color: var(--primary-white-color);
 }
 
-.address .link {
+.address .link{
     font-family: inherit;
     font-style: normal;
     line-height: 1.71;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--primary-text-color);
 }
 
 .address .link:not(:last-child) {
     margin-bottom: 9px;
 }
 
-.adress .link:hover,
-.adress .link:focus {
+.address .link:hover,
+.address .link:focus {
     color: var(--accent-color);
 }
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link .call {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--primary-white-color);
+}
+
+.footer-link__list {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.footer-link__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    fill: var(--primary-white-color);
+    border-radius: 50%;
+    background-size: 44px 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-link__list li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-link__list .footer-link__item:hover,
+.footer-link__list .footer-link__item:focus {
+    background-color: var(--accent-color);
+    background-size: 44px 44px;
+    border-radius: 50%;
+}
+
 
 /* PORTFOLIO */
 
 .portfolio {
+    margin-top: 94px;
     margin-bottom: 94px;
 }
 
