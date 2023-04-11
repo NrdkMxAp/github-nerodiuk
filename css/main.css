@@ -35,6 +35,10 @@ ul {
     padding: 0;
 }
 
+button {
+    border: 0;
+}
+
 img {
     display: block;
 }
@@ -55,7 +59,7 @@ img {
 
 /* Header */
 
-.conteiner {
+.conteiner, .menu-conteiner, .examples-conteiner {
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
@@ -123,7 +127,7 @@ span {
     display: flex;
     flex-direction: row;
     padding-left: 0px;
-    margin-left: 344px;
+    margin-left: 318px;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -138,6 +142,9 @@ span {
 }
 
 .auth-nav .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -145,9 +152,21 @@ span {
     color: var(--primary-text-color);
 }
 
+.auth-nav .envelope-icon,
+.auth-nav .smartphone-icon{
+    margin-right: 10px;
+    fill: var(--primary-text-color);
+}
+
+
 .auth-nav .link:hover,
-.auth-nav .link:focus {
+.auth-nav .link:focus{
     color: var(--accent-color);
+}
+
+.envelope-icon,.smartphone-icon:hover,
+.envelope-icon,.smartphone-icon:focus{
+    fill: var(--accent-color);
 }
 
 /* HERO */
@@ -156,8 +175,8 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 600px;
-    background-color: var(--primary-bgc-color);
+    background-image: url(/Images/bgc-hero.jpg);
+    background-size: cover;
 }
 
 .hero .conteiner {
@@ -192,7 +211,7 @@ span {
     padding: 10px 32px;
     background-color: var(--button-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border:none;
+    border-radius: 4px;
     
     font-weight: 700;
     font-style: normal;
@@ -209,18 +228,27 @@ span {
 .adventages {
     margin-top: 94px;
     margin-bottom: 94px;
-}
+ }
 
 .adventages .list {
     display: flex;
     flex-direction: row;
     padding-left: 0;
     margin: 0;
-    max-height:98px;
 }
 
 .adventages .item {
     width: 270px;
+}
+
+.adventages .adventages-icon-bgc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background-color: var(--secondary-bgc-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
 }
 
 .adventages .item:not(:first-child) {
@@ -299,6 +327,7 @@ span {
 
 .team .list {
     display: flex;
+    flex-direction: row;
 }
 
 .team .card {
@@ -326,7 +355,7 @@ span {
 }
 
 .team .text {
-    padding-bottom: 30px;
+    padding-bottom: 16px;
     margin-top: 0px;
 
     font-style: normal;
@@ -335,6 +364,45 @@ span {
     line-height: 1.19;
     text-align: center;
 }
+
+.social-link__list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.social-link__list .social-link__item {
+    display: flex;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+}
+
+.social-link {
+    display: flex;
+    align-self: center;
+}
+
+.social-link__list .social-link__item:hover,
+.social-link__list .social-link__item:focus {
+    background-color: var(--accent-color);
+    background-size: 44px 44px;
+    border-radius: 50%;
+}
+
+.social-link__list .social-link__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-link__list .social-link__icon {
+    fill: #AFB1B8;
+}
+
+.social-link__list .social-link__icon:hover,
+.social-link__list .social-link__icon:focus {
+    fill: var(--primary-white-color);
+}
+
 
 /* FOOTER */
 
@@ -388,26 +456,13 @@ span {
 /* PORTFOLIO */
 
 .portfolio {
-    display: flex;
-    background-color: var(--white-bgc-color);
-    flex-direction: column;
+    margin-bottom: 94px;
 }
 
-.portfolio .menu{
+.menu-conteiner .list{
     display: flex;
-    align-self: center;
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: 200px;
-    margin-right: 200px;
-}
-
-.portfolio .list{
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    padding-right: 0;
+    justify-content: center;
+    margin-top: 94px;
 
     font-family: roboto,sans-serif;
     font-weight: 400;
@@ -417,11 +472,16 @@ span {
     font-style: normal; 
 }
 
-.menu .menu-button {
+.menu-conteiner .list > li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.menu-conteiner .menu-button {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
+    border: 0;
 
     color: var(--primary-black-color);
     border-color: var(--secondary-bgc-color);
@@ -431,18 +491,15 @@ span {
     border-radius: 4px;
 }
 
-.menu > li:not(:last-child) {
-    margin-right: 8px;
-}
 
-.menu .menu-button:hover,
-.menu .menu-button:focus {
+.menu-conteiner .menu-button:hover,
+.menu-conteiner .menu-button:focus {
     background-color: var(--accent-color);
     color: var(--primary-white-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.menu .menu-button.active {
+.menu-conteiner .menu-button.active {
 
     color: var(--primary-white-color);
     background-color: var(--accent-color);
@@ -475,6 +532,11 @@ span {
     margin-bottom: 0px;
 }
 
+.examples .card {
+    background-color: var(--primary-white-color);
+    width: 370px;
+}
+
 .examples .card-img {
     display: block;
 }
@@ -503,7 +565,3 @@ span {
     line-height: 1.88;
 }
 
-.examples .card {
-    background-color: var(--primary-white-color);
-    width: 370px;
-}
