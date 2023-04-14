@@ -152,8 +152,9 @@ ul {
 /* HERO */
 
 .hero {
+    margin: 0 auto;
     padding: 200px 0px;
-    max-width: 1600px ;
+    max-width: 1600px;
     height: 600px;
     background: linear-gradient(
         rgba(47, 48, 58, 0.4),
