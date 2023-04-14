@@ -153,6 +153,7 @@ ul {
 
 .hero {
     padding: 200px 0px;
+    max-width: 1600px ;
     height: 600px;
     background: linear-gradient(
         rgba(47, 48, 58, 0.4),
@@ -335,7 +336,7 @@ ul {
 
 .social-link__icon {
     display: block;
-    fill: var(--primary-text-color);
+    fill: #AFB1B8;
 }
 
 .social-link__item:hover {
@@ -426,7 +427,6 @@ ul {
 
     background: var(--secondary-bgc-color);
     border-radius: 4px;
-    cursor: pointer;
 }
 
 .menu-button.active {
@@ -440,6 +440,7 @@ ul {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     background-color: var(--accent-color);
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .examples-list {
@@ -460,6 +461,10 @@ ul {
     width: 370px;
     background: var(--white-bgc-color);
     border: 1px solid #EEEEEE;
+}
+
+.examples-card:hover,
+.examples-card:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
