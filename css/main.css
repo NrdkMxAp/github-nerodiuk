@@ -426,6 +426,7 @@ ul {
 
     background: var(--secondary-bgc-color);
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .menu-button.active {
