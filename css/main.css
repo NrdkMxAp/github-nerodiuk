@@ -378,7 +378,8 @@ ul {
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    fill: var(--primary-text-color);
+    fill:#AFB1B8;
+    cursor:pointer;
 }
 
 
